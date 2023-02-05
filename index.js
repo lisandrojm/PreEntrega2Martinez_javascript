@@ -335,7 +335,7 @@ let precioPorHoraLibreDeGastos =
 
 if (precioPorHora < gastosPorHora + costosPorHora) {
   alert(
-    "Tus pretensiones de Ingreso son mas bajas que tus gastos.Esperemos que no trabajes de programador.\nActualiza la página y vuelve a intentarlo."
+    "Tus pretensiones de Ingreso son mas bajas que tus gastos.Esperemos que no trabajes de programador.\nPresiona f5 y vuelve a intentarlo."
   );
 } else {
   alert(
