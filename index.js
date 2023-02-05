@@ -154,7 +154,7 @@ alert(
     horas +
     " horas por día durante " +
     dias +
-    " días por mes.\nPara lograrlo y cotizar los trabajos correctamente debemos calcular el precio a cobrar por Hora Laborable. Vamos a hacerlo ..."
+    " días por mes.\nPara lograrlo y cotizar los trabajos correctamente debemos calcular el precio a cobrar por Hora Laborable. Vamos a calcularlo ..."
 );
 
 // console.log para registrar el ingreso
@@ -287,17 +287,22 @@ for (let index = 0; index < costosDeVida.length; index++) {
       )
     );
   }
+  //utilización del metodo push() del array.
   resultadoTotal.push(resultado);
 }
 
 let costosFijosTotales = 0;
 
+//recorrido del array y uso de la propiedad length.
 for (let i = 0; i < resultadoTotal.length; i++) {
   costosFijosTotales += resultadoTotal[i];
 }
 
 alert("Tus Costos de Vida mensuales son " + costosFijosTotales + " " + moneda) +
   ".";
+
+// console.log para registrar el ingreso del array
+console.log(resultadoTotal);
 
 //Declaración de la variable gastosMasCostos. Para saber el total de gastos más costos.
 let gastosMasCostos = gastosFijosTotales + costosFijosTotales;
@@ -372,3 +377,27 @@ if (precioPorHora < gastosPorHora + costosPorHora) {
       " por Hora Laborable."
   );
 }
+
+//función de orden superior para comparar si el ingreso pretendido supera el sueldo mensual
+// promedio de un programador junior
+
+const sueldoPromedioDeUnProgramadorJunior = 500;
+
+const chequearSueldoPromedio = (ingresoPretendido, sueldo) => {
+  return ingresoPretendido >= sueldo
+    ? "Tus ingresos pretendidos son superiores a " +
+        sueldoPromedioDeUnProgramadorJunior +
+        " " +
+        moneda +
+        " que es el sueldo promedio de un programador Junior. Mucha suerte!!"
+    : "Tus ingresos pretendidos son menores a " +
+        sueldoPromedioDeUnProgramadorJunior +
+        " " +
+        moneda +
+        " que es el sueldo promedio de un programador Junior. Valora tu trabajo.";
+};
+const testJunior = chequearSueldoPromedio(
+  ingresos,
+  sueldoPromedioDeUnProgramadorJunior
+);
+alert(testJunior);
