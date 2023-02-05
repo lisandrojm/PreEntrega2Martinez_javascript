@@ -80,10 +80,14 @@ let ingresos = parseInt(
   ).toLowerCase()
 );
 
-while (isNaN(ingresos)) {
-  alert(
-    "No ingresaste un número válido. Si escribiste el número con letras vuelve a intentarlo con números."
-  );
+while (isNaN(ingresos) || ingresos < 1) {
+  if (ingresos < 1) {
+    alert("Debes Ingresar un número mayor a 0.");
+  } else {
+    alert(
+      "No ingresaste un número válido. Si escribiste el número con letras vuelve a intentarlo con números."
+    );
+  }
   ingresos = parseInt(
     prompt(
       "Ingresa EL MONTO en " + moneda + " de lo que pretendes ganar por Mes."
@@ -101,9 +105,9 @@ let dias = parseInt(
   ).toLowerCase()
 );
 
-while (isNaN(dias) || dias > 31) {
-  if (dias > 31) {
-    alert("El mes tiene 31 días.");
+while (isNaN(dias) || dias > 31 || dias < 1) {
+  if (dias > 31 || dias < 1) {
+    alert("Debes Ingresar un número entre 1 y 31.");
   } else {
     alert(
       "No ingresaste un número válido. Si escribiste el número con letras vuelve a intentarlo con números."
@@ -117,7 +121,7 @@ while (isNaN(dias) || dias > 31) {
 }
 
 // console.log para registrar el ingreso
-console.log("Cantidad de días laborables por mes es: " + dias + " días.");
+console.log("Cantidad de días laborables por mes: " + dias + " días.");
 ////////////////////////////////////////////////////////////////////////////////
 // Solicitud de ingreso de las horas que pretende trabajar por día.
 let horas = parseInt(
@@ -126,9 +130,9 @@ let horas = parseInt(
   ).toLowerCase()
 );
 
-while (isNaN(horas) || horas > 24) {
-  if (horas > 24) {
-    alert("El día tiene 24 horas.");
+while (isNaN(horas) || horas > 24 || horas < 1) {
+  if (horas > 24 || horas < 1) {
+    alert("Debes ingresar un número entre 1 y 24.");
   } else {
     alert(
       "No ingresaste un número válido. Si escribiste el número con letras vuelve a intentarlo con números."
@@ -150,7 +154,7 @@ alert(
     horas +
     " horas por día durante " +
     dias +
-    " días por mes.\nPara lograrlo y cotizar los trabajos correctamente debes calcular el precio a cobrar por Hora Laborable."
+    " días por mes.\nPara lograrlo y cotizar los trabajos correctamente debemos calcular el precio a cobrar por Hora Laborable. Vamos a hacerlo ..."
 );
 
 // console.log para registrar el ingreso
@@ -184,10 +188,14 @@ let gastosOficina = parseInt(
   ).toLowerCase()
 );
 
-while (isNaN(gastosOficina)) {
-  alert(
-    "No ingresaste un número válido. Si escribiste el número con letras vuelve a intentarlo con números."
-  );
+while (isNaN(gastosOficina) || gastosOficina < 1) {
+  if (gastosOficina < 1) {
+    alert("Debes Ingresar un número mayor a 0.");
+  } else {
+    alert(
+      "No ingresaste un número válido. Si escribiste el número con letras vuelve a intentarlo con números."
+    );
+  }
   gastosOficina = parseInt(
     prompt(
       "Ingresa tus Gastos de OFICINA en " + moneda.toUpperCase() + " por Mes."
@@ -201,10 +209,14 @@ let gastosInternet = parseInt(
   ).toLowerCase()
 );
 
-while (isNaN(gastosInternet)) {
-  alert(
-    "No ingresaste un número válido. Si escribiste el número con letras vuelve a intentarlo con números."
-  );
+while (isNaN(gastosInternet) || gastosInternet < 1) {
+  if (gastosInternet < 1) {
+    alert("Debes Ingresar un número mayor a 0.");
+  } else {
+    alert(
+      "No ingresaste un número válido. Si escribiste el número con letras vuelve a intentarlo con números."
+    );
+  }
   gastosInternet = parseInt(
     prompt(
       "Ingresa tus Gastos de INTERNET en " + moneda.toUpperCase() + " por Mes."
@@ -217,10 +229,14 @@ let gastosSoftware = parseInt(
   ).toLowerCase()
 );
 
-while (isNaN(gastosSoftware)) {
-  alert(
-    "No ingresaste un número válido. Si escribiste el número con letras vuelve a intentarlo con números."
-  );
+while (isNaN(gastosSoftware) || gastosSoftware < 1) {
+  if (gastosSoftware < 1) {
+    alert("Debes Ingresar un número mayor a 0.");
+  } else {
+    alert(
+      "No ingresaste un número válido. Si escribiste el número con letras vuelve a intentarlo con números."
+    );
+  }
   gastosSoftware = parseInt(
     prompt(
       "Ingresa tus Gastos de SOFTWARE en " + moneda.toUpperCase() + " por Mes."
@@ -254,10 +270,14 @@ for (let index = 0; index < costosDeVida.length; index++) {
         costosDeVida[index]
     )
   );
-  while (isNaN(resultado)) {
-    alert(
-      "No ingresaste un número válido. Si escribiste el número con letras vuelve a intentarlo con números."
-    );
+  while (isNaN(resultado) || resultado < 1) {
+    if (resultado < 1) {
+      alert("Debes Ingresar un número mayor a 0.");
+    } else {
+      alert(
+        "No ingresaste un número válido. Si escribiste el número con letras vuelve a intentarlo con números."
+      );
+    }
     resultado = parseInt(
       prompt(
         "Calculemos TUS COSTOS DE VIDA mensuales:\nIngresa el costo mensual en  " +
