@@ -331,12 +331,7 @@ let gastosPorHora = calcularPorHora(gastosFijosTotales, dias, horas);
 let costosPorHora = calcularPorHora(costosFijosTotales, dias, horas);
 
 ////////////////////////////////////////////////////////////////////////////////
-// metodo Math.ceil() para devolver en el precio por hora un número entero mayor o igual al más próximo
-
-let precioPorHoraLibreDeGastos =
-  Math.ceil(precioPorHora) +
-  Math.ceil(gastosPorHora) +
-  Math.ceil(costosPorHora);
+let precioPorHoraLibreDeGastos = precioPorHora + gastosPorHora + costosPorHora;
 
 if (precioPorHora < gastosPorHora + costosPorHora) {
   alert(
@@ -347,17 +342,18 @@ if (precioPorHora < gastosPorHora + costosPorHora) {
     "Según los datos que ingresaste el cálculo en Horas Laborables es:\n" +
       "\n" +
       "Dinero pretendido por Hora Laborable libre de gastos: " +
-      Math.ceil(precioPorHora) +
+      // metodo toFixed() para devolver el precio por hora con dos decimales.
+      precioPorHora.toFixed(2) +
       " " +
       moneda +
       ".\n" +
       "Gastos por Hora Laborable: " +
-      Math.ceil(gastosPorHora) +
+      gastosPorHora.toFixed(2) +
       " " +
       moneda +
       ".\n" +
       "Costo de Vida por Hora Laborable: " +
-      Math.ceil(costosPorHora) +
+      costosPorHora.toFixed(2) +
       " " +
       moneda +
       ".\n" +
@@ -371,7 +367,7 @@ if (precioPorHora < gastosPorHora + costosPorHora) {
       " horas por día durante " +
       dias +
       " días por mes, debes cobrar " +
-      Math.ceil(precioPorHoraLibreDeGastos) +
+      precioPorHoraLibreDeGastos.toFixed(2) +
       " " +
       moneda +
       " por Hora Laborable."
@@ -382,22 +378,27 @@ if (precioPorHora < gastosPorHora + costosPorHora) {
 // promedio de un programador junior
 
 const sueldoPromedioDeUnProgramadorJunior = 500;
+const ingresosPretendidosMasGastos = ingresos + gastosMasCostos;
+
+console.log(
+  "Los ingresos pretendidos mas los gastos son " + ingresosPretendidosMasGastos
+);
 
 const chequearSueldoPromedio = (ingresoPretendido, sueldo) => {
   return ingresoPretendido >= sueldo
-    ? "Tus ingresos pretendidos son superiores a " +
+    ? "Tus ingresos pretendidos mas tus gastos son superiores a " +
         sueldoPromedioDeUnProgramadorJunior +
         " " +
         moneda +
-        " que es el sueldo promedio de un programador Junior. Mucha suerte!!"
-    : "Tus ingresos pretendidos son menores a " +
+        " que es el sueldo promedio de un programador Junior.Vas por buen camino. Mucha suerte!!"
+    : "Tus ingresos pretendidos mas tus gastos son menores a " +
         sueldoPromedioDeUnProgramadorJunior +
         " " +
         moneda +
         " que es el sueldo promedio de un programador Junior. Valora tu trabajo.";
 };
 const testJunior = chequearSueldoPromedio(
-  ingresos,
+  ingresosPretendidosMasGastos,
   sueldoPromedioDeUnProgramadorJunior
 );
 alert(testJunior);
