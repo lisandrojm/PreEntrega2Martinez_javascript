@@ -154,7 +154,7 @@ alert(
     horas +
     " horas por día durante " +
     dias +
-    " días por mes.\nPara lograrlo y cotizar los trabajos correctamente debemos calcular el precio a cobrar por Hora Laborable. Vamos a calcularlo ..."
+    " días por mes.\nPara lograrlo y cotizar los trabajos correctamente debemos calcular el precio a cobrar por Hora de Trabajo. Vamos a calcularlo ..."
 );
 
 // console.log para registrar el ingreso
@@ -342,20 +342,20 @@ if (precioPorHora < gastosPorHora + costosPorHora) {
   );
 } else {
   alert(
-    "Según los datos que ingresaste el cálculo en Horas Laborables es:\n" +
+    "Según los datos que ingresaste el cálculo en Horas de trabajo es:\n" +
       "\n" +
-      "Dinero pretendido por Hora Laborable libre de gastos: " +
+      "Dinero pretendido por Hora de Trabajo libre de gastos: " +
       // metodo toFixed() para devolver el precio por hora con dos decimales.
       precioPorHora.toFixed(2) +
       " " +
       moneda +
       ".\n" +
-      "Gastos por Hora Laborable: " +
+      "Gastos por Hora de Trabajo: " +
       gastosPorHora.toFixed(2) +
       " " +
       moneda +
       ".\n" +
-      "Costo de Vida por Hora Laborable: " +
+      "Costo de Vida por Hora de Trabajo: " +
       costosPorHora.toFixed(2) +
       " " +
       moneda +
@@ -373,7 +373,7 @@ if (precioPorHora < gastosPorHora + costosPorHora) {
       precioPorHoraLibreDeGastos.toFixed(2) +
       " " +
       moneda +
-      " por Hora Laborable."
+      " por Hora de Trabajo."
   );
 }
 
