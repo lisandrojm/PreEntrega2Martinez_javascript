@@ -381,30 +381,22 @@ if (precioPorHora < gastosPorHora + costosPorHora) {
 // promedio de un programador junior
 
 const sueldoPromedioDeUnProgramadorJunior = 500;
-const ingresosPretendidosMasGastos = ingresos + gastosMasCostos;
-
-console.log(
-  "Los ingresos pretendidos mas los gastos son " +
-    ingresosPretendidosMasGastos +
-    " " +
-    moneda
-);
 
 const chequearSueldoPromedio = (ingresoPretendido, sueldo) => {
   return ingresoPretendido >= sueldo
-    ? "Tus ingresos pretendidos mas tus gastos son superiores a " +
+    ? "Tus ingresos pretendidos son superiores a " +
         sueldoPromedioDeUnProgramadorJunior +
         " " +
         moneda +
         " que es el sueldo promedio de un programador Junior.\nVas por buen camino. Mucha suerte!!"
-    : "Tus ingresos pretendidos mas tus gastos son menores a " +
+    : "Tus ingresos pretendidos son menores a " +
         sueldoPromedioDeUnProgramadorJunior +
         " " +
         moneda +
         " que es el sueldo promedio de un programador Junior. Valora tu trabajo. Si quieres volver a intentarlo presiona F5.";
 };
 const testJunior = chequearSueldoPromedio(
-  ingresosPretendidosMasGastos,
+  ingresos,
   sueldoPromedioDeUnProgramadorJunior
 );
 alert(testJunior);
