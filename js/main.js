@@ -338,7 +338,7 @@ let precioPorHoraLibreDeGastos = precioPorHora + gastosPorHora + costosPorHora;
 
 if (precioPorHora < gastosPorHora + costosPorHora) {
   alert(
-    "Tus pretensiones de Ingreso son mas bajas que tus gastos. Esperemos que no trabajes de programador.\nPresiona F5 y vuelve a intentarlo."
+    "Tus pretensiones de Ingreso son mas bajas que tus gastos. Esperemos que no trabajes de programador."
   );
 } else {
   alert(
@@ -401,7 +401,7 @@ const chequearSueldoPromedio = (ingresoPretendido, sueldo) => {
         sueldoPromedioDeUnProgramadorJunior +
         " " +
         moneda +
-        " que es el sueldo promedio de un programador Junior. Valora tu trabajo.";
+        " que es el sueldo promedio de un programador Junior. Valora tu trabajo. Si quieres volver a intentarlo presiona F5.";
 };
 const testJunior = chequearSueldoPromedio(
   ingresosPretendidosMasGastos,
