@@ -301,15 +301,18 @@ for (let i = 0; i < resultadoTotal.length; i++) {
 alert("Tus Costos de Vida mensuales son " + costosFijosTotales + " " + moneda) +
   ".";
 
-// console.log para registrar el ingreso del array
-console.log(resultadoTotal);
-
 //Declaración de la variable gastosMasCostos. Para saber el total de gastos más costos.
 let gastosMasCostos = gastosFijosTotales + costosFijosTotales;
 
 // console.log para registrar el ingreso
 console.log(
   "Costo de vida fijos por mes es: " + costosFijosTotales + " " + moneda
+);
+
+// console.log utilizando el metodo join para registrar el ingreso del array y compararlo con la suma de Costos de vida fijos.
+console.log(
+  "El resultado de los Costos de vida fijos por mes es la suma de los valores ingresados " +
+    resultadoTotal.join(" , ")
 );
 
 // console.log para registrar el ingreso
@@ -335,7 +338,7 @@ let precioPorHoraLibreDeGastos = precioPorHora + gastosPorHora + costosPorHora;
 
 if (precioPorHora < gastosPorHora + costosPorHora) {
   alert(
-    "Tus pretensiones de Ingreso son mas bajas que tus gastos.Esperemos que no trabajes de programador.\nPresiona f5 y vuelve a intentarlo."
+    "Tus pretensiones de Ingreso son mas bajas que tus gastos. Esperemos que no trabajes de programador.\nPresiona F5 y vuelve a intentarlo."
   );
 } else {
   alert(
@@ -381,7 +384,10 @@ const sueldoPromedioDeUnProgramadorJunior = 500;
 const ingresosPretendidosMasGastos = ingresos + gastosMasCostos;
 
 console.log(
-  "Los ingresos pretendidos mas los gastos son " + ingresosPretendidosMasGastos
+  "Los ingresos pretendidos mas los gastos son " +
+    ingresosPretendidosMasGastos +
+    " " +
+    moneda
 );
 
 const chequearSueldoPromedio = (ingresoPretendido, sueldo) => {
@@ -390,7 +396,7 @@ const chequearSueldoPromedio = (ingresoPretendido, sueldo) => {
         sueldoPromedioDeUnProgramadorJunior +
         " " +
         moneda +
-        " que es el sueldo promedio de un programador Junior.Vas por buen camino. Mucha suerte!!"
+        " que es el sueldo promedio de un programador Junior.\nVas por buen camino. Mucha suerte!!"
     : "Tus ingresos pretendidos mas tus gastos son menores a " +
         sueldoPromedioDeUnProgramadorJunior +
         " " +
